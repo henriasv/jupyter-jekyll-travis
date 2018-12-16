@@ -3,11 +3,6 @@ language: python
 python: 
  - 3.6
 
-before_install:
-  - gem install jekyll
-  - bundle install
-  - pip install nbconvert
-
 script:
   - /bin/bash make.sh
 
