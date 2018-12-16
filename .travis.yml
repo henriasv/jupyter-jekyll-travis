@@ -3,12 +3,11 @@ language: python
 python: 
  - 3.6
 
-services: 
-  - docker
+before_install:
+  - gem install jekyll
+  - bundle install
 
-script: 
-  - ls
-  - echo $(pwd)
+script:
   - /bin/bash make.sh
 
 deploy:
