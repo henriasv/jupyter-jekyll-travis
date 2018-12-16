@@ -7,6 +7,7 @@ services:
 
 before-install: 
   - docker pull jupyter/datascience-notebook
+  - docker run jupyter/datascience-notebook /bin/sh -c "make build"
 
 script: 
   - make build
