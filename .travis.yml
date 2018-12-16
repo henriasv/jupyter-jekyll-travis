@@ -9,9 +9,7 @@ services:
 script: 
   - ls
   - echo $(pwd)
-  - docker run ubuntu /bin/bash make.sh
-
-# jupyter/datascience-notebook
+  - /bin/bash make.sh
 
 deploy:
   provider: pages
