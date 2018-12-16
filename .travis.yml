@@ -7,10 +7,9 @@ services:
 
 before-install: 
   - docker pull jupyter/datascience-notebook
-  - docker run jupyter/datascience-notebook /bin/sh -c "make build"
 
 script: 
-  - make build
+  - docker run -v $(pwd) jupyter/datascience-notebook /bin/bash -c "cd henriasv/jupyter-jekyll-travis && make build"
 
 deploy:
   provider: pages
