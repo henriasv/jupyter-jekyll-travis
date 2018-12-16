@@ -9,8 +9,9 @@ before-install:
   - docker pull jupyter/datascience-notebook
 
 script: 
+  - ls
   - echo $(pwd)
-  - docker run -v $(pwd) jupyter/datascience-notebook /bin/bash -c "make build"
+  - docker run -v $(pwd) jupyter/datascience-notebook /bin/bash -c "echo $(pwd) && make build"
 
 deploy:
   provider: pages
