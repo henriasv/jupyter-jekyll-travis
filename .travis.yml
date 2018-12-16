@@ -6,6 +6,9 @@ services:
 before-install: 
   - docker pull jupyter/datascience-notebook
 
+script: 
+  - make build
+
 deploy:
   provider: pages
   skip-cleanup: true
